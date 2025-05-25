@@ -1,0 +1,16 @@
+# Directories
+.vs/
+thirdparty/
+Assets/
+x64/
+
+# Files
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.sln
+*.log
+Makefile
+
+# Exclude
+!Vendor/Binaries
