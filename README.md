@@ -1,49 +1,44 @@
-🔧 Vulkan Renderer Prototype
+# 🔧 Vulkan Renderer Prototype
 
-"A throwaway Vulkan renderer prototype I built to explore rendering pipelines, debug tooling, and UI integration. This is not production code — just a testbed before building the actual engine."
+*A throwaway prototype built to explore Vulkan rendering, debug tooling, and UI integration. Not production-ready — just a personal testbed to shake out ideas before building a full engine.*
 
-🧪 What It Does
+---
 
-Sets up a Vulkan renderer from scratch
+## 🧪 What It Does
 
-Integrates ImGui for live parameter tweaking
+- Initializes a Vulkan renderer from scratch
+- Renders basic 3D geometry (mesh loading via Assimp)
+- Integrates **ImGui** for real-time parameter tweaking and debug overlays
+- Lays the groundwork for more complex systems (e.g., pipeline abstractions, GPU resource tracking)
 
-Renders basic 3D geometry with debug overlays
+---
 
-💭 Why I Built This
+## 💭 Why I Built This
 
-I'm prototyping architecture, workflow, and Vulkan pain points before committing to a full engine. This repo is a sandbox for:
+Before committing to a full engine architecture, I needed a space to prototype and stress-test Vulkan’s quirks. This repo serves as a sandbox for:
 
-Validating Vulkan abstractions (buffers, pipelines, etc.)
+- Validating Vulkan abstraction layers (buffers, pipelines, descriptors, etc.)
+- Getting **UI workflows** in early (ImGui + Vulkan backend)
+- Building a renderer that explains itself through **debug visuals** and overlays
+- Exploring **data-oriented layout and memory management patterns**
 
-Integrating UI workflows early (ImGui with Vulkan)
+---
 
-Building a renderer that explains itself in real-time via debug visuals
+## 📦 Tech Stack
 
-📦 Stuff It Uses
+- **Vulkan SDK 1.3+**
+- **ImGui** — UI/debug overlay
+- **GLM** — math
+- **STB** — image loading
+- **Assimp** — mesh import/export
 
-Vulkan SDK (1.3+)
+Tested on **Windows (MSVC 2022)**, should be portable to Linux with minor tweaks.\
+Requires **CMake 3.20+** and the Vulkan SDK installed.
 
-ImGui
+---
 
-GLM
+## ⚠️ Known Limitations
 
-STB
-
-Assimp (for basic mesh import)
-
-Tested on Windows + MSVC 2022, should work on Linux with minimal tweaks. You’ll need Vulkan SDK and CMake 3.20+.
-
-⚠️ Known Issues
-
-Hardcoded asset paths
-
-Minimal error handling
-
-Lifetime management is rough
-
-No memory allocator yet (just wrapper allocations)
-
-🧺 Disclaimer
-
-This is not clean, optimized, or even particularly safe code. It’s a stepping stone for the real engine.
+- ❌ Hardcoded asset paths
+- 🛑 Minimal error checking/logging
+- 🧽 No custom memory allocator yet —
